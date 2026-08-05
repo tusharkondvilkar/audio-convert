@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ai-audio-studio
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.11
